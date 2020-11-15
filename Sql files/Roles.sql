@@ -1,0 +1,26 @@
+USE MI6AgencyDB
+
+CREATE ROLE Chiefs
+GRANT SELECT, INSERT, UPDATE, DELETE TO Chiefs
+
+CREATE ROLE Secretaries
+GRANT SELECT, INSERT, UPDATE, DELETE ON Require TO Secretaries
+GRANT SELECT, INSERT, UPDATE, DELETE ON GiveOut TO Secretaries
+GRANT SELECT, UPDATE ON Mission TO Secretaries
+GRANT SELECT, UPDATE ON Transmit TO Secretaries
+GRANT SELECT ON FieldAgent TO Secretaries
+GRANT SELECT ON Secretary TO Secretaries
+GRANT SELECT ON Client TO Secretaries
+GRANT SELECT ON Informant TO Secretaries
+GRANT SELECT ON Information TO Secretaries
+GRANT SELECT ON Gadget TO Secretaries
+GRANT SELECT ON Executee TO Secretaries
+GRANT SELECT ON Question TO Secretaries
+GRANT SELECT ON Need TO Secretaries
+
+
+CREATE ROLE Agents
+GRANT SELECT, INSERT, UPDATE ON Informant TO Agents
+GRANT SELECT, INSERT, UPDATE ON Information TO Agents
+GRANT SELECT, INSERT, UPDATE ON Need TO Agents
+GRANT INSERT ON GiveOut TO Agents

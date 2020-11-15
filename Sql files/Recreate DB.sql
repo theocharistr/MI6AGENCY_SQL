@@ -1,0 +1,9 @@
+EXEC msdb.dbo.sp_delete_database_backuphistory @database_name = N'MI6AgencyDB'
+GO
+USE [master]
+GO
+ALTER DATABASE MI6AgencyDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE
+GO
+DROP DATABASE MI6AgencyDB
+GO
+CREATE DATABASE MI6AgencyDB

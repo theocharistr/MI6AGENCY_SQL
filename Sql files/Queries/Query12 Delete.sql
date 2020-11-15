@@ -1,0 +1,4 @@
+USE MI6AgencyDB
+
+DELETE FROM Require WHERE gadgetID = 85
+DELETE FROM Gadget WHERE gadgetID = 85
